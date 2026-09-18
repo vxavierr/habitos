@@ -28,6 +28,7 @@ npm run check:ios12
 npm run build
 npm run serve
 npm run smoke
+npm run deploy
 ```
 
 Não há dependências npm. `serve` escuta só `127.0.0.1` e é HTTP de desenvolvimento: serve para testar no computador, **não** para o iPod. Service worker no aparelho exige HTTPS com certificado confiável.
@@ -50,7 +51,7 @@ Arquivos estáticos em `app/`, copiados para `dist/` no build.
 |---|---|
 | Código e build estático | implementado |
 | Testes Node + checagem iOS 12 + smoke Chromium 320×568 | ver `VALIDACAO.md` |
-| Deploy HTTPS | **não realizado** — falta autorização de hospedagem |
-| Validado no iPod | **não** — pendente de hardware |
+| Deploy HTTPS | **realizado** — https://vxavierr.github.io/habitos/ (Let's Encrypt, 200 neste computador) |
+| Validado no iPod | **não** — pendente de você abrir no Safari do Touch |
 
 Detalhes: `CONFIGURAR-IPOD.md`, `BACKUP-E-RECUPERACAO.md`, `VALIDACAO.md`.

@@ -1,6 +1,8 @@
 # Backup e recuperação
 
-Atualizado em 2026-09-18 16:35 BRT.
+Atualizado em 2026-09-18 17:01 BRT.
+
+Origem publicada: https://vxavierr.github.io/habitos/
 
 O Safari pode apagar IndexedDB e o cache do service worker. Ícone na tela inicial não é backup. Copiar o JSON para outra nota, e-mail ou computador é o critério real.
 

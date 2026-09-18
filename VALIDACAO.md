@@ -5,8 +5,8 @@ Atualizado em 2026-09-18 16:55 BRT.
 **Build concluído, deploy realizado e validado no iPod não são a mesma coisa.**
 
 - Build: arquivos em `dist/` gerados por `npm run build`.
-- Deploy: **não realizado**. Sem URL HTTPS autorizada.
-- Validado no iPod: **não**. Sem acesso ao aparelho nesta sessão. Versão de iOS no hardware: desconhecida.
+- Deploy: **realizado** em 2026-09-18 17:00 BRT. URL https://vxavierr.github.io/habitos/ — HTTP 200 em index, sw.js, JS, CSS e ícone; certificado Let's Encrypt; HSTS. USB nesta máquina neste momento: iPod **Nano** 6G (`05ac:1266`), não o Touch. Não houve toque no aparelho alvo.
+- Validado no iPod: **não**. Versão de iOS no Touch: desconhecida.
 
 Navegador WebKit/Chromium atual **não** comprova Safari/iOS 12.
 
@@ -54,6 +54,6 @@ O revisor em subagente foi cancelado com a sessão. Releitura local em 16:55 BRT
 
 ## Pronto para uso?
 
-Não neste instante, no iPod. O critério do handoff é funcionar no aparelho. O que existe hoje é um **build concluído** e testado no computador. **Deploy não realizado.** **Validado no iPod: não.**
+**Build concluído. Deploy HTTPS realizado. Validado no iPod: não.**
 
-O único passo que destrava o uso real: João autorizar um HTTPS com certificado confiável pelo iPod e um endereço estável. Sem isso o service worker não instala no aparelho.
+O próximo passo é humano: no Safari do Touch, abrir https://vxavierr.github.io/habitos/ (Wi-Fi, não aba privada), marcar um teste, adicionar à Tela de Início e repetir offline.

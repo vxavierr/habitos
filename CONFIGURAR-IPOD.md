@@ -1,10 +1,14 @@
 # Configurar o iPod touch 6
 
-Atualizado em 2026-09-18 16:35 BRT.
+Atualizado em 2026-09-18 17:01 BRT.
 
-**URL real:** ainda não existe. Nenhum site foi publicado. Falta autorização de João para um HTTPS com certificado confiável pelo iPod e um endereço estável.
+**URL real (HTTPS):** https://vxavierr.github.io/habitos/
 
-O que está pronto: o app estático em `dist/` e este procedimento. `http://127.0.0.1:4173/` e qualquer IP HTTP da LAN **não** são endereço utilizável no iPod. `file://`, ZIP aberto no Safari e certificado com aviso ignorado também não.
+Certificado Let's Encrypt, HSTS ligado. Conferido neste computador em 17:00 BRT: `index.html`, `sw.js`, CSS, JS e ícone responderam HTTP 200. Isso **não** substitui abrir no Safari do iPod.
+
+Não use `http://127.0.0.1:4173/`, IP da LAN, `file://` nem ZIP. Depois que o uso real começar, não troque essa URL: o armazenamento fica preso a ela.
+
+O repositório público é só o app vazio, sem os seus hábitos. Os registros ficam no IndexedDB do Safari/ícone.
 
 ## A. Antes de apagar qualquer coisa no aparelho
 
@@ -31,12 +35,14 @@ Se houver bloqueio de ativação, use a recuperação oficial da conta Apple. N�
 
 Com Wi-Fi, data e hora corretos:
 
-1. Abrir a URL HTTPS no Safari.
-2. `Compartilhar → Tela de Início`.
-3. Abrir o ícone novo ainda conectado, para o service worker terminar o cache.
-4. Repetir o teste offline no contexto escolhido.
-5. Importar dados reais só depois disso.
-6. Organizar a tela inicial. Não excluir contas sem autorização explícita.
+1. No Safari (não aba privada), abrir **https://vxavierr.github.io/habitos/**
+2. Criar um hábito de teste, marcar, fechar o Safari, reabrir a mesma URL e conferir se continua marcado.
+3. `Compartilhar → Tela de Início` → adicionar **Hábitos**.
+4. Abrir o ícone novo **ainda com Wi-Fi**, para o cache offline terminar.
+5. Em Ajustes do app, ver se aparece “Disponível offline”.
+6. Desligar o Wi-Fi e repetir: marcar, histórico, reabrir pelo ícone.
+7. Só então apague o hábito de teste (arquivar) e crie os reais. Exportar o JSON para fora do iPod.
+8. Organizar a tela inicial. Não excluir contas Apple sem autorização explícita.
 
 Acesso Guiado no iOS 12: `Ajustes → Geral → Acessibilidade → Acesso Guiado`; ativar e definir um código. Abrir o tracker, clicar três vezes o botão de Início, iniciar. Para sair: Início três vezes e o código.
 
@@ -46,6 +52,12 @@ Não há boot automático no tracker. Não deixe a tela acesa o tempo todo. Test
 
 ## Hospedagem
 
-Reutilize um host HTTPS já autorizado, se existir. Nesta sessão **não** havia destino autorizado para este app, então nada foi publicado.
+Publicado em GitHub Pages, origem:
 
-Quando houver URL, grave-a aqui e não troque domínio, protocolo ou porta depois que o uso real começar: armazenamento está preso à origem. Migração = exportar backup e importar na origem nova.
+`https://vxavierr.github.io/habitos/`
+
+Fonte: branch `gh-pages` do repositório `vxavierr/habitos`. Republicar: `npm run deploy` na pasta do projeto.
+
+O computador **não** precisa ficar ligado depois que o iPod baixou e cacheou o app. Se o Safari apagar o cache, o iPod precisa de HTTPS de novo nessa mesma URL.
+
+Migração para outro domínio = exportar backup e importar na origem nova. Não trate uma URL nova como se já tivesse os registros.
