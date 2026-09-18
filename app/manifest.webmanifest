@@ -1,0 +1,22 @@
+{
+  "name": "Hábitos",
+  "short_name": "Hábitos",
+  "lang": "pt-BR",
+  "display": "standalone",
+  "start_url": "./index.html",
+  "scope": "./",
+  "background_color": "#f6f3ec",
+  "theme_color": "#1f3d32",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

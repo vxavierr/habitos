@@ -1,0 +1,7 @@
+{
+  "at": "2026-09-18T19:46:48.808Z",
+  "viewport": "320x568",
+  "browser": "chromium-headless",
+  "result": "pass",
+  "note": "Chromium moderno não prova Safari/iOS 12."
+}
