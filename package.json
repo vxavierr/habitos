@@ -8,6 +8,7 @@
     "check:ios12": "node scripts/check-ios12-syntax.js",
     "build": "node scripts/build.js",
     "serve": "node scripts/serve.js",
-    "smoke": "node scripts/smoke-chromium.js"
+    "smoke": "node scripts/smoke-chromium.js",
+    "deploy": "bash scripts/deploy-github-pages.sh"
   }
 }

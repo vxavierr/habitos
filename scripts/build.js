@@ -42,6 +42,7 @@ var swPath = path.join(DEST, "sw.js");
 var sw = fs.readFileSync(swPath, "utf8");
 sw = sw.replace(/habitos-0\.1\.0/g, "habitos-" + pkg.version);
 fs.writeFileSync(swPath, sw);
+fs.writeFileSync(path.join(DEST, ".nojekyll"), "");
 
 var required = [
   "index.html",
